@@ -9,6 +9,26 @@
     <artifactId>saiku-service</artifactId>
     <version>3.14</version>
     <name>saiku - services</name>
+    
+    <repositories>
+        <repository>
+            <id>mvnrepository</id>
+            <url>http://mvnrepository.com/</url>
+        </repository>
+        <repository>
+		<id>proxy-public-5.4-release</id>
+                <url>http://nexus.pentaho.org/content/repositories/proxy-public-5.4-release/</url>
+	</repository>
+        <repository>
+            <id>pentaho-public-release</id>
+            <url>http://nexus.pentaho.org/content/repositories/proxy-public-release/</url>
+        </repository>
+        <repository>
+            <id>pentaho-snapshot</id>
+            <url>http://nexus.pentaho.org/content/repositories/proxy-public-snapshot/</url>
+        </repository>
+    </repositories>
+    
     <build>
         <plugins>
            <!-- <plugin>
@@ -51,9 +71,12 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>mondrian-data-foodmart-hsql</groupId>
-                                    <artifactId>mondrian-data-foodmart-hsql</artifactId>
-                                    <version>0.1</version>
+                                    <groupId>pentaho</groupId>
+                                    <artifactId>mondrian-data-foodmart-hsqldb</artifactId>
+                                    <!--<groupId>mondrian-data-foodmart-hsql</groupId>-->
+                                    <!--<artifactId>mondrian-data-foodmart-hsql</artifactId>-->
+                                    <version>0.2</version>
+                                    <!--<version>0.1</version>-->
                                     <type>jar</type>
                                     <outputDirectory>target/</outputDirectory>
                                 </artifactItem>
@@ -211,6 +234,7 @@
         <dependency>
             <groupId>pentaho</groupId>
             <artifactId>mondrian</artifactId>
+            <version>4.3.1.0-164</version>
             <exclusions>
                 <exclusion>
                     <groupId>javax.servlet</groupId>

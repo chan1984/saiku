@@ -9,8 +9,8 @@
 	<packaging>jar</packaging>
 	<version>3.14</version>
 	<name>saiku biserver plugin</name>
-
-	<build>
+	
+        <build>
 		<resources>
 			<resource>
 				<directory>src/main/plugin</directory>
@@ -332,7 +332,7 @@
 		</plugins>
 	</build>
 	<repositories>
-		<repository>
+<!--		<repository>
 			<id>Analytical Labs Repo</id>
 			<name>Analytical Labs Repo-releases</name>
 			<url>http://repo.meteorite.bi/repository/alabs-release-local/</url>
@@ -341,18 +341,24 @@
 			<id>Analytical Labs snapshots</id>
 			<name>Analytical Labs Repo-releases</name>
 			<url>http://repo.meteorite.bi/repository/alabs-snapshot-local/</url>
-		</repository>
-		<repository>
+		</repository>-->
+<!--		<repository>
 			<id>pentaho-third-party</id>
 			<url>http://nexus.pentaho.org/content/repositories/proxied-3rd-party-releases/</url>
 		</repository>
 		<repository>
 			<id>pentaho-public-release</id>
-			<url>http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/</url>
+                        <url>http://nexus.pentaho.org/content/repositories/proxy-public-release/</url>
+		</repository>-->
+                
+                <repository>
+			<id>proxy-public-5.4-release</id>
+                        <url>http://nexus.pentaho.org/content/repositories/proxy-public-5.4-release/</url>
 		</repository>
+                
 		<repository>
 			<id>pentaho-snapshot</id>
-			<url>http://nexus.pentaho.org/content/repositories/public-snapshots/</url>
+                        <url>http://nexus.pentaho.org/content/repositories/proxy-public-snapshot/</url>
 		</repository>
 
 		<repository>
@@ -388,6 +394,7 @@
 		<dependency>
 			<groupId>pentaho</groupId>
 			<artifactId>cpf-core</artifactId>
+                        <version>5.4.0.4-149</version>
 			<exclusions>
 			<exclusion>
 					<groupId>janino</groupId>
@@ -398,6 +405,7 @@
 		<dependency>
 			<groupId>pentaho</groupId>
 			<artifactId>cpf-pentaho5</artifactId>
+                         <version>5.4.0.4-149</version>
 			<exclusions>
 				<exclusion>
 					<groupId>pentaho</groupId>
@@ -467,6 +475,7 @@
 		<dependency>
 			<groupId>pentaho</groupId>
 			<artifactId>pentaho-platform-repository</artifactId>
+                        <version>5.4.0.4-149</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
