@@ -51,9 +51,14 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>mondrian-data-foodmart-hsql</groupId>
+									<groupId>pentaho</groupId>
+									<artifactId>mondrian-data-foodmart-hsqldb</artifactId>
+									<version>0.2</version>
+                                    <!--
+									<groupId>mondrian-data-foodmart-hsql</groupId>
                                     <artifactId>mondrian-data-foodmart-hsql</artifactId>
                                     <version>0.1</version>
+									-->
                                     <type>jar</type>
                                     <outputDirectory>target/</outputDirectory>
                                 </artifactItem>

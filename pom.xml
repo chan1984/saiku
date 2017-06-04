@@ -70,9 +70,23 @@
             <name>Analytical Labs Repo-releases</name>
             <url>http://repo.meteorite.bi/content/repositories/alabs-snapshot-local/</url>
         </repository>
+		
+		<repository>
+            <id>proxy-public-5.4-release</id>
+            <url>http://nexus.pentaho.org/content/repositories/proxy-public-5.4-release/</url>
+		</repository>
+		<repository>
+            <id>proxy-public-6.1-release</id>
+            <url>http://nexus.pentaho.org/content/repositories/proxy-public-6.1-release/</url>
+		</repository>
+		<repository>
+            <id>mvnrepository</id>
+            <url>http://mvnrepository.com/</url>
+        </repository>
         <repository>
             <id>pentaho-third-party</id>
-            <url>http://nexus.pentaho.org/content/repositories/proxied-3rd-party-releases/</url>
+			<url>http://nexus.pentaho.org/content/repositories/proxy-3rd-party-releases/</url>
+            <!--<url>http://nexus.pentaho.org/content/repositories/proxied-3rd-party-releases/</url>-->
         </repository>
         <repository>
             <id>pentaho-public-release</id>
@@ -594,9 +608,12 @@
                 <version>${jbehave.version}</version>
             </dependency>
             <dependency>
-                <groupId>mondrian-data-foodmart-hsql</groupId>
-                <artifactId>mondrian-data-foodmart-hsql</artifactId>
-                <version>0.1</version>
+				<groupId>pentaho</groupId>
+				<artifactId>mondrian-data-foodmart-hsqldb</artifactId>
+				<version>0.2</version>
+                <!--<groupId>mondrian-data-foodmart-hsql</groupId>-->
+                <!--<artifactId>mondrian-data-foodmart-hsql</artifactId>-->
+                <!--<version>0.1</version>-->
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -850,7 +867,8 @@
             <dependency>
                 <groupId>pentaho</groupId>
                 <artifactId>cpf-core</artifactId>
-                <version>5.2.0.2-84</version>
+				<version>5.4.1.8-209</version>
+                <!--<version>5.2.0.2-84</version>-->
                 <exclusions>
                     <exclusion>
                         <groupId>janino</groupId>
@@ -861,7 +879,8 @@
             <dependency>
                 <groupId>pentaho</groupId>
                 <artifactId>cpf-pentaho5</artifactId>
-                <version>5.2.0.2-84</version>
+                <version>5.4.1.8-209</version>
+				<!--<version>5.2.0.2-84</version>-->
                 <exclusions>
                     <exclusion>
                         <groupId>pentaho</groupId>
